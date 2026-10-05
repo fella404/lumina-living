@@ -5,6 +5,7 @@ import FeaturedProperties from "../components/home/FeaturedProperties";
 import PropertyCatalog from "../components/home/PropertyCatalog";
 import PopularRegions from "../components/home/PopularRegions";
 import HomeBlogs from "../components/home/HomeBlogs";
+import Testimonials from "../components/home/Testimonials";
 
 const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,6 +25,7 @@ const HomePage = () => {
       <PropertyCatalog />
       <PopularRegions />
       <HomeBlogs />
+      <Testimonials />
     </main>
   );
 };
