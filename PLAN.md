@@ -1,6 +1,6 @@
-# PLAN.md — Property Agent (Frontend React + TypeScript)
+# PLAN.md — Property Agent (Frontend React + JavaScript)
 
-Catatan: setup Vite + React (TypeScript) + Tailwind dikerjakan manual (di luar plan ini). Plan dimulai dari langkah setelah itu.
+Catatan: setup Vite + React (JavaScript) + Tailwind dikerjakan manual (di luar plan ini). Plan dimulai dari langkah setelah itu.
 
 ## 0. Keputusan Teknis
 
@@ -26,20 +26,19 @@ npm install embla-carousel-react lucide-react
 npm install @fontsource-variable/geist @fontsource-variable/geist-mono
 
 # shadcn/ui (opsional tapi disarankan, jalankan setelah Tailwind siap)
-# Prasyarat: path alias "@/*" -> "./src/*" di tsconfig.json + tsconfig.app.json dan vite.config.ts
-npm install -D @types/node
+# Prasyarat: path alias "@/*" -> "./src/*" di vite.config.js
 npx shadcn@latest init
 npx shadcn@latest add button input select badge card carousel dialog toggle-group
 ```
 
-`react-router`, `zustand`, `embla-carousel-react`, dan `lucide-react` sudah menyertakan type sendiri, jadi tidak perlu paket `@types/*` tambahan.
+`react-router`, `zustand`, `embla-carousel-react`, dan `lucide-react` sudah siap dipakai langsung tanpa konfigurasi tambahan.
 
 ## 1. Design Tokens
 
 - [ ] Petakan semua warna dari COLOR-AND-TYPOGRAPHY.md ke CSS variables (`--primary`, `--primary-foreground`, `--secondary`, `--accent`, `--muted`, `--border`, `--input`, `--ring`, `--chart-1..5`, `--radius: 0.65rem`)
 - [ ] Set font: `--font-sans: Geist`, `--font-serif: Georgia`, `--font-mono: Geist Mono`
 - [ ] Set shadow token: `0 4px 10px 0 rgb(0 0 0 / 0.1)`
-- [ ] Import font di `main.tsx`
+- [ ] Import font di `main.jsx`
 - [ ] Catatan kontras: `card`, `background`, `muted`, dan `secondary` sama-sama `#F9FAFB`. Pakai shadow atau border yang sedikit lebih gelap agar card tidak menyatu dengan background
 - [ ] Putuskan warna aksen untuk badge For Sale / For Rent (tema saat ini sangat netral)
 
@@ -56,39 +55,38 @@ src/
 ├─ hooks/                  # useInView, useScrollPast, dll
 ├─ pages/                  # HomePage, PropertiesPage, dst
 ├─ store/                  # zustand stores
-├─ types/                  # interface & type (Property, Region, Blog, dll)
 ├─ lib/                    # utils (cn, formatter harga)
-├─ router.tsx
-└─ main.tsx
+├─ router.jsx
+└─ main.jsx
 ```
 
 ## 3. Data Layer (Mock)
 
-- [ ] Buat interface di `src/types/` (mis. `property.ts`, `region.ts`, `blog.ts`, `testimonial.ts`)
-- [ ] `Property`: `id, slug, name, type: PropertyType, status: PropertyStatus, price, location (city, region), image, bedrooms, bathrooms, area, featured`
-- [ ] Buat union type: `PropertyStatus = "sell" | "rent"` dan `PropertyType = "house" | "apartment" | "villa" | ...` (dipakai bersama oleh dropdown, chips, dan store)
+- [ ] Definisikan struktur data mock: `Property`, `Region`, `Blog`, `Testimonial` (cukup sebagai objek polos di `src/data/`)
+- [ ] `Property`: `id, slug, name, type ('house' | 'apartment' | 'villa' | ...), status ('sell' | 'rent'), price, location (city, region), image, bedrooms, bathrooms, area, featured`
+- [ ] Daftar nilai valid untuk `status` dan `type` dibuat sebagai konstanta (mis. di `src/lib/propertyFilters.js`) agar dipakai bersama oleh dropdown, chips, dan store
 - [ ] `Region`: `id, slug, name, image, propertyCount`
 - [ ] `Blog`: `id, slug, title, subtitle, image, tags: string[]`
 - [ ] `Testimonial`: `id, name, role, quote, avatar`
-- [ ] Buat mock data di `src/data/` dengan tipe eksplisit (mis. `export const properties: Property[] = [...]`) (minimal 20 property agar "View more" bisa diuji 8 → 16 → 20+, 6 region, 4+ blog, 4+ testimonial)
+- [ ] Buat mock data di `src/data/` sebagai array objek polos (minimal 20 property agar "View more" bisa diuji 8 → 16 → 20+, 6 region, 4+ blog, 4+ testimonial)
 
 ## 4. Routing
 
-- [ ] Buat `router.tsx` dengan `createBrowserRouter` dan `RootLayout` (Navbar + `<Outlet />` + Footer)
+- [ ] Buat `router.jsx` dengan `createBrowserRouter` dan `RootLayout` (Navbar + `<Outlet />` + Footer)
 - [ ] Route:
   - `/` → HomePage
   - `/properties` → PropertiesPage (soon)
   - `/properties/:slug` → PropertyDetailPage (soon)
   - `/regions` dan `/regions/:slug` → RegionPage (soon)
   - `/blogs` dan `/blogs/:slug` → BlogPage (soon)
-- [ ] Pasang `RouterProvider` di `main.tsx`
+- [ ] Pasang `RouterProvider` di `main.jsx`
 - [ ] Buat placeholder sederhana untuk halaman "soon" agar link Navbar tidak 404
 
 ## 5. State Management (Zustand)
 
-- [ ] `useSearchStore`: `status: PropertyStatus | null`, `type: PropertyType | null`, `query: string`, dengan aksi `setStatus`, `setType`, `setQuery`, `reset`. Definisikan interface state + actions, lalu pakai `create<SearchState>()(...)`
+- [ ] `useSearchStore`: `status` ('sell' | 'rent' | null), `type` ('house' | ... | null), `query: string`, dengan aksi `setStatus`, `setType`, `setQuery`, `reset`. Pakai `create((set) => ({ ... }))`
 - [ ] `useUiStore`: `isSearchOverlayOpen`, `openSearch`, `closeSearch`
-- [ ] Catalog memakai `activeType` (chips) dan `visibleCount` (mulai 8, +8 tiap "View more"). `visibleCount` cukup `useState<number>(8)` lokal, tidak perlu global. **Catatan:** Home Page selalu tampil 8 item awal, tombol "View more" hanya navigasi ke `/properties`; `visibleCount` (+8 per klik) dipakai di `PropertiesPage`
+- [ ] Catalog memakai `activeType` (chips) dan `visibleCount` (mulai 8, +8 tiap "View more"). `visibleCount` cukup `useState(8)` lokal, tidak perlu global. **Catatan:** Home Page selalu tampil 8 item awal, tombol "View more" hanya navigasi ke `/properties`; `visibleCount` (+8 per klik) dipakai di `PropertiesPage`
 - [ ] Saat submit search di hero: set store lalu pindah halaman dengan `useNavigate()` ke `/properties?status=...&type=...&q=...`
 
 ## 6. Layout: Navbar
@@ -156,7 +154,7 @@ src/
 - [ ] Aksesibilitas: label input, focus ring (`--ring`), alt text gambar, navigasi keyboard di overlay dan carousel
 - [ ] Scroll ke atas saat pindah route
 - [ ] Cek kontras teks vs background (lihat catatan warna di bagian 1)
-- [ ] Pastikan `tsc -b` bersih tanpa error dan hindari `any` (ketik props semua komponen, mis. `PropertyCardProps`)
+- [ ] Pastikan `npm run lint` bersih tanpa error dan jaga penamaan props komponen tetap konsisten
 - [ ] Rapikan komponen duplikat (`PropertyCard` dan `FeaturedCard` bisa berbagi base)
 
 ## 10. Urutan Kerja yang Disarankan

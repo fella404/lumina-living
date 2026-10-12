@@ -4,7 +4,7 @@
 | ---------------- | ------------------------------------------------------------- |
 | **Jenis proyek** | Proyek dummy untuk portfolio frontend development             |
 | **Platform**     | Web (responsif: mobile, tablet, desktop)                      |
-| **Stack**        | React + TypeScript, Vite, Tailwind CSS, React Router, Zustand |
+| **Stack**        | React (JavaScript), Vite, Tailwind CSS, React Router, Zustand   |
 | **Data**         | Mock data statis (tanpa backend)                              |
 | **Status**       | Fase 1: Home page. Halaman lain menyusul                      |
 
@@ -26,7 +26,7 @@ Website agen properti dan real estate di Indonesia yang memungkinkan pengunjung 
 
 - Menunjukkan kemampuan membangun UI kompleks: bento grid, carousel, floating search dengan overlay, dan grid dengan pagination "view more".
 - Menunjukkan penerapan design system yang konsisten (design tokens, tipografi, shadow, radius).
-- Menunjukkan struktur kode yang bersih: TypeScript, komponen reusable, routing, dan state management.
+- Menunjukkan struktur kode yang bersih: JavaScript, komponen reusable, routing, dan state management.
 
 ## 3. Target Pengguna
 
@@ -158,7 +158,7 @@ Footer, Properties, Property Detail, Region, dan Blog. Spesifikasinya akan ditam
 
 ## 7. Model Data
 
-Semua data berupa mock statis dengan tipe TypeScript.
+Semua data berupa mock statis dalam bentuk objek JavaScript.
 
 | Entitas         | Field utama                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -172,7 +172,7 @@ Semua data berupa mock statis dengan tipe TypeScript.
 - **Responsif:** nyaman di mobile, tablet, dan desktop.
 - **Performa:** gambar `lazy-load`, hindari layout shift (gunakan aspect ratio).
 - **Aksesibilitas:** label pada input, focus ring terlihat, alt text pada gambar, dan overlay/carousel bisa dioperasikan dengan keyboard.
-- **Kualitas kode:** TypeScript tanpa `any`, `tsc -b` bersih, komponen reusable (`PropertyCard`, `BlogCard`, `RegionCard`, `SearchBar`).
+- **Kualitas kode:** JavaScript bersih dan konsisten, `npm run lint` tanpa error, komponen reusable (`PropertyCard`, `BlogCard`, `RegionCard`, `SearchBar`).
 - **Konsistensi visual:** seluruh warna, radius, dan shadow bersumber dari design tokens.
 
 ## 9. Arsitektur Singkat

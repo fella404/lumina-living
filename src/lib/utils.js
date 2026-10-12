@@ -1,0 +1,18 @@
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
+
+export function formatRupiah(value) {
+  if (value >= 1_000_000_000) {
+    const miliar = value / 1_000_000_000;
+    return `Rp ${miliar.toLocaleString("id-ID", { maximumFractionDigits: 1 })} Miliar`;
+  }
+  if (value >= 1_000_000) {
+    const juta = value / 1_000_000;
+    return `Rp ${juta.toLocaleString("id-ID", { maximumFractionDigits: 0 })} Juta`;
+  }
+  return `Rp ${value.toLocaleString("id-ID")}`;
+}
