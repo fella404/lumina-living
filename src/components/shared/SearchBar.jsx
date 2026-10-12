@@ -80,7 +80,7 @@ const SearchBar = () => {
       <input
         type="search"
         aria-label="Cari lokasi atau nama proyek"
-        placeholder="Search location or project name"
+        placeholder="Search location or property name"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         className="min-w-0 flex-1 bg-transparent px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none"

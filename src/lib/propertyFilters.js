@@ -15,7 +15,7 @@ export const statusLabels = {
 };
 
 export const priceRanges = [
-  { value: "lt500m", label: "Di bawah Rp 500 Juta", max: 500_000_000 },
+  { value: "lt500m", label: "Under Rp 500 Juta", max: 500_000_000 },
   {
     value: "500m-1b",
     label: "Rp 500 Juta – 1 Miliar",
@@ -40,7 +40,7 @@ export const priceRanges = [
     min: 5_000_000_000,
     max: 10_000_000_000,
   },
-  { value: "gt10b", label: "Di atas Rp 10 Miliar", min: 10_000_000_000 },
+  { value: "gt10b", label: "Above Rp 10 Miliar", min: 10_000_000_000 },
 ];
 
 const PRICE_RANGE_VALUES = priceRanges.map((range) => range.value);
@@ -78,7 +78,7 @@ export function parseFilters(params) {
 
 export function filtersToSearchParams(filters) {
   const params = new URLSearchParams();
-  if (filters.q.trim()) params.set("q", filters.q.trim());
+  if (filters.q) params.set("q", filters.q);
   if (filters.status) params.set("status", filters.status);
   if (filters.type) params.set("type", filters.type);
   if (filters.regions.length) params.set("region", filters.regions.join(","));

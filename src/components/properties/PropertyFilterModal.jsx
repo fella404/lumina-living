@@ -21,7 +21,7 @@ const statusOptions = [
 ];
 
 const priceOptions = [
-  { value: "all", label: "Semua Harga" },
+  { value: "all", label: "All Price" },
   ...priceRanges.map((range) => ({ value: range.value, label: range.label })),
 ];
 
@@ -54,7 +54,7 @@ const PropertyFilterModal = ({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title="Filter Properti"
+      title="Filter Property"
       footer={
         <div className="flex items-center justify-between gap-3">
           <Button
@@ -71,7 +71,7 @@ const PropertyFilterModal = ({
               onClose();
             }}
           >
-            Terapkan
+            Apply
           </Button>
         </div>
       }
@@ -93,7 +93,7 @@ const PropertyFilterModal = ({
 
         <section>
           <h3 className="mb-2 text-sm font-medium text-foreground">
-            Tipe Properti
+            Property Type
           </h3>
           <FilterChips
             options={typeOptions}
@@ -109,7 +109,7 @@ const PropertyFilterModal = ({
 
         <section>
           <h3 className="mb-2 text-sm font-medium text-foreground">
-            Range Harga
+            Price Range
           </h3>
           <FilterChips
             options={priceOptions}

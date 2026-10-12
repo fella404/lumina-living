@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import RootLayout from "./components/layout/RootLayout";
 import HomePage from "./pages/HomePage";
 import PropertiesPage from "./pages/PropertiesPage";
+import PropertyDetailPage from "./pages/PropertyDetailPage";
 import SoonPage from "./components/shared/SoonPage";
 
 export const router = createBrowserRouter([
@@ -12,7 +13,7 @@ export const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "about", element: <SoonPage title="About" /> },
       { path: "properties", element: <PropertiesPage /> },
-      { path: "properties/:slug", element: <SoonPage title="Property Detail" /> },
+      { path: "properties/:slug", element: <PropertyDetailPage /> },
       { path: "regions", element: <SoonPage title="Regions" /> },
       { path: "regions/:slug", element: <SoonPage title="Region" /> },
       { path: "blogs", element: <SoonPage title="Blogs" /> },

@@ -19,7 +19,11 @@ const Modal = ({
     };
     window.addEventListener("keydown", onKeyDown);
     document.body.style.overflow = "hidden";
-    panelRef.current?.focus();
+    // Hanya rebut fokus jika belum ada elemen di dalam modal yang aktif,
+    // agar input teks tidak kehilangan fokus tiap re-render.
+    if (!panelRef.current?.contains(document.activeElement)) {
+      panelRef.current?.focus();
+    }
     return () => {
       window.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = "";

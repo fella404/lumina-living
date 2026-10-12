@@ -1,3 +1,25 @@
+// Foto interior bersama untuk galeri detail page (mock).
+const INTERIOR = {
+  living:
+    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+  kitchen:
+    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+  bedroom:
+    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
+  bathroom:
+    "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+  dining:
+    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
+  modern:
+    "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
+  pool: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+  exterior:
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+  loft: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
+  bedroomModern:
+    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
+};
+
 export const properties = [
   {
     id: "prop-001",
@@ -14,6 +36,19 @@ export const properties = [
     bathrooms: 3,
     area: 320,
     featured: true,
+    description:
+      "A two-storey family home in the heart of Kemang with generous natural light and a private garden. Minutes away from popular cafés, international schools, and shopping centers.",
+    yearBuilt: 2019,
+    carport: 2,
+    furnishing: "furnished",
+    amenities: [
+      "Carport",
+      "Park",
+      "24/7 Security",
+      "Water Heater",
+      "Wet Kitchen",
+    ],
+    gallery: [INTERIOR.living, INTERIOR.kitchen, INTERIOR.bedroomModern],
   },
   {
     id: "prop-002",
@@ -29,6 +64,13 @@ export const properties = [
     bathrooms: 2,
     area: 96,
     featured: true,
+    description:
+      "City-garden facing apartment in the heart of Senopati. Perfect for young professionals who want quick access to restaurants and business districts.",
+    yearBuilt: 2021,
+    carport: 1,
+    furnishing: "furnished",
+    amenities: ["Lift", "Gym", "Kolam Renang", "Security 24 Jam", "Laundry"],
+    gallery: [INTERIOR.modern, INTERIOR.dining, INTERIOR.bedroom],
   },
   {
     id: "prop-003",
@@ -39,11 +81,25 @@ export const properties = [
     price: 450_000_000,
     city: "Gianyar",
     region: "Bali",
-    image: "https://images.unsplash.com/photo-1670589953882-b94c9cb380f5?w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1670589953882-b94c9cb380f5?w=800&q=80",
     bedrooms: 3,
     bathrooms: 3,
     area: 400,
     featured: true,
+    description:
+      "A private villa overlooking Ubud's lush rice terraces, complete with an infinity pool. Surrounded by the calm atmosphere of the Balinese countryside.",
+    yearBuilt: 2020,
+    carport: 2,
+    furnishing: "furnished",
+    amenities: [
+      "Kolam Renang",
+      "Taman",
+      "Fully Furnished",
+      "WiFi",
+      "Security 24 Jam",
+    ],
+    gallery: [INTERIOR.pool, INTERIOR.living, INTERIOR.bedroom],
   },
   {
     id: "prop-004",
@@ -59,6 +115,19 @@ export const properties = [
     bathrooms: 4,
     area: 520,
     featured: false,
+    description:
+      "A luxurious ready-to-move-in home in Pondok Indah with a spacious family room and a green backyard. Gated neighborhood with easy toll access.",
+    yearBuilt: 2018,
+    carport: 3,
+    furnishing: "partial",
+    amenities: [
+      "Carport",
+      "Taman",
+      "Security 24 Jam",
+      "Kolam Renang",
+      "Dapur Pembantu",
+    ],
+    gallery: [INTERIOR.exterior, INTERIOR.living, INTERIOR.dining],
   },
   {
     id: "prop-005",
@@ -74,6 +143,19 @@ export const properties = [
     bathrooms: 2,
     area: 180,
     featured: false,
+    description:
+      "A townhouse on the highlands of Dago with panoramic views of Bandung. Features a one-gate system and a shared garden for families.",
+    yearBuilt: 2017,
+    carport: 2,
+    furnishing: "unfurnished",
+    amenities: [
+      "Carport",
+      "Taman",
+      "One Gate System",
+      "Club House",
+      "Security 24 Jam",
+    ],
+    gallery: [INTERIOR.living, INTERIOR.bedroom, INTERIOR.bathroom],
   },
   {
     id: "prop-006",
@@ -89,6 +171,13 @@ export const properties = [
     bathrooms: 1,
     area: 64,
     featured: false,
+    description:
+      "A practical apartment in the heart of BSD City's CBD. Walking distance to the station, mall, and campus — ideal for long-term rent.",
+    yearBuilt: 2022,
+    carport: 1,
+    furnishing: "furnished",
+    amenities: ["Lift", "Gym", "Kolam Renang", "Security 24 Jam", "Laundry"],
+    gallery: [INTERIOR.modern, INTERIOR.kitchen, INTERIOR.bedroomModern],
   },
   {
     id: "prop-007",
@@ -104,6 +193,19 @@ export const properties = [
     bathrooms: 4,
     area: 450,
     featured: false,
+    description:
+      "A beachfront villa in Sanur with direct beach access and a private pool. A promising holiday investment.",
+    yearBuilt: 2019,
+    carport: 2,
+    furnishing: "furnished",
+    amenities: [
+      "Kolam Renang",
+      "Taman",
+      "Fully Furnished",
+      "WiFi",
+      "Water Heater",
+    ],
+    gallery: [INTERIOR.pool, INTERIOR.dining, INTERIOR.bedroom],
   },
   {
     id: "prop-008",
@@ -119,6 +221,19 @@ export const properties = [
     bathrooms: 3,
     area: 300,
     featured: false,
+    description:
+      "A modern home in Citraland Surabaya with an open-plan layout and a front garden. Suitable for large families.",
+    yearBuilt: 2020,
+    carport: 2,
+    furnishing: "partial",
+    amenities: [
+      "Carport",
+      "Taman",
+      "Security 24 Jam",
+      "One Gate System",
+      "Water Heater",
+    ],
+    gallery: [INTERIOR.exterior, INTERIOR.living, INTERIOR.kitchen],
   },
   {
     id: "prop-009",
@@ -134,6 +249,13 @@ export const properties = [
     bathrooms: 1,
     area: 36,
     featured: false,
+    description:
+      "An industrial-style loft studio in Kemang. Fully furnished and ideal for young professionals seeking a practical home.",
+    yearBuilt: 2021,
+    carport: 1,
+    furnishing: "furnished",
+    amenities: ["Fully Furnished", "AC", "WiFi", "Laundry", "Pantry"],
+    gallery: [INTERIOR.loft, INTERIOR.bedroomModern, INTERIOR.bathroom],
   },
   {
     id: "prop-010",
@@ -149,6 +271,19 @@ export const properties = [
     bathrooms: 3,
     area: 350,
     featured: false,
+    description:
+      "A hillside villa in Setiabudi with cool air and valley views. Comes with a swimming pool and tropical garden.",
+    yearBuilt: 2018,
+    carport: 2,
+    furnishing: "furnished",
+    amenities: [
+      "Kolam Renang",
+      "Taman",
+      "Fully Furnished",
+      "Carport",
+      "Security 24 Jam",
+    ],
+    gallery: [INTERIOR.pool, INTERIOR.living, INTERIOR.bathroom],
   },
   {
     id: "prop-011",
@@ -164,6 +299,19 @@ export const properties = [
     bathrooms: 2,
     area: 150,
     featured: false,
+    description:
+      "A two-storey townhouse in Pondok Cengkeh with a backyard garden. An affordable home in the Tangerang area.",
+    yearBuilt: 2016,
+    carport: 1,
+    furnishing: "unfurnished",
+    amenities: [
+      "Carport",
+      "Taman",
+      "One Gate System",
+      "Club House",
+      "Security 24 Jam",
+    ],
+    gallery: [INTERIOR.exterior, INTERIOR.living, INTERIOR.bedroom],
   },
   {
     id: "prop-012",
@@ -179,6 +327,20 @@ export const properties = [
     bathrooms: 6,
     area: 800,
     featured: false,
+    description:
+      "A grand two-storey mansion in one of South Jakarta's elite neighborhoods. Double-height living room, private lift, and a swimming pool.",
+    yearBuilt: 2021,
+    carport: 4,
+    furnishing: "furnished",
+    amenities: [
+      "Kolam Renang",
+      "Lift",
+      "Carport",
+      "Taman",
+      "Security 24 Jam",
+      "Dapur Pembantu",
+    ],
+    gallery: [INTERIOR.living, INTERIOR.dining, INTERIOR.pool],
   },
   {
     id: "prop-013",
@@ -194,6 +356,13 @@ export const properties = [
     bathrooms: 2,
     area: 78,
     featured: false,
+    description:
+      "An apartment overlooking Mas River in Surabaya. Complete facilities: swimming pool, gym, and a commercial area.",
+    yearBuilt: 2020,
+    carport: 1,
+    furnishing: "furnished",
+    amenities: ["Lift", "Gym", "Kolam Renang", "Security 24 Jam", "Laundry"],
+    gallery: [INTERIOR.modern, INTERIOR.dining, INTERIOR.bedroomModern],
   },
   {
     id: "prop-014",
@@ -209,6 +378,19 @@ export const properties = [
     bathrooms: 2,
     area: 240,
     featured: false,
+    description:
+      "A jungle-edge retreat in Ubud for holidays or daily rental investment. An open layout that blends with nature.",
+    yearBuilt: 2019,
+    carport: 1,
+    furnishing: "furnished",
+    amenities: [
+      "Kolam Renang",
+      "Taman",
+      "Fully Furnished",
+      "WiFi",
+      "Water Heater",
+    ],
+    gallery: [INTERIOR.pool, INTERIOR.modern, INTERIOR.bedroom],
   },
   {
     id: "prop-015",
@@ -224,6 +406,13 @@ export const properties = [
     bathrooms: 2,
     area: 160,
     featured: false,
+    description:
+      "An artisan-style house in Yogyakarta's Kotabaru district. Perfect as a creative home or homestay business.",
+    yearBuilt: 2015,
+    carport: 1,
+    furnishing: "partial",
+    amenities: ["Carport", "Taman", "Water Heater", "WiFi", "Pantry"],
+    gallery: [INTERIOR.living, INTERIOR.kitchen, INTERIOR.bathroom],
   },
   {
     id: "prop-016",
@@ -239,6 +428,13 @@ export const properties = [
     bathrooms: 2,
     area: 140,
     featured: false,
+    description:
+      "A modern minimalist house in Condongcatur near the university area. A lively neighborhood with easy access to the city center.",
+    yearBuilt: 2019,
+    carport: 1,
+    furnishing: "unfurnished",
+    amenities: ["Carport", "Taman", "Security 24 Jam", "One Gate System"],
+    gallery: [INTERIOR.exterior, INTERIOR.modern, INTERIOR.bedroom],
   },
   {
     id: "prop-017",
@@ -254,6 +450,13 @@ export const properties = [
     bathrooms: 1,
     area: 45,
     featured: false,
+    description:
+      "A premium studio in Juanda, Surabaya, ideal for students or office workers. Comes fully furnished.",
+    yearBuilt: 2022,
+    carport: 1,
+    furnishing: "furnished",
+    amenities: ["Lift", "Fully Furnished", "AC", "WiFi", "Security 24 Jam"],
+    gallery: [INTERIOR.loft, INTERIOR.bedroomModern, INTERIOR.kitchen],
   },
   {
     id: "prop-018",
@@ -269,6 +472,19 @@ export const properties = [
     bathrooms: 3,
     area: 210,
     featured: false,
+    description:
+      "An urban vertical house in Cipete with a modern design and rooftop. Five minutes from the MRT station.",
+    yearBuilt: 2021,
+    carport: 1,
+    furnishing: "furnished",
+    amenities: [
+      "Carport",
+      "Fully Furnished",
+      "Security 24 Jam",
+      "Water Heater",
+      "WiFi",
+    ],
+    gallery: [INTERIOR.modern, INTERIOR.living, INTERIOR.bathroom],
   },
   {
     id: "prop-019",
@@ -284,6 +500,19 @@ export const properties = [
     bathrooms: 2,
     area: 165,
     featured: false,
+    description:
+      "A townhouse with a front garden in Lengkong, Bandung. Close to universities and local markets.",
+    yearBuilt: 2018,
+    carport: 2,
+    furnishing: "partial",
+    amenities: [
+      "Carport",
+      "Taman",
+      "One Gate System",
+      "Club House",
+      "Security 24 Jam",
+    ],
+    gallery: [INTERIOR.living, INTERIOR.dining, INTERIOR.bedroomModern],
   },
   {
     id: "prop-020",
@@ -299,6 +528,20 @@ export const properties = [
     bathrooms: 5,
     area: 650,
     featured: false,
+    description:
+      "A cliffside villa in Tabanan with world-class waves below. Unobstructed views of the Indian Ocean.",
+    yearBuilt: 2020,
+    carport: 2,
+    furnishing: "furnished",
+    amenities: [
+      "Kolam Renang",
+      "Taman",
+      "Fully Furnished",
+      "WiFi",
+      "Carport",
+      "Security 24 Jam",
+    ],
+    gallery: [INTERIOR.pool, INTERIOR.exterior, INTERIOR.living],
   },
   {
     id: "prop-021",
@@ -314,6 +557,13 @@ export const properties = [
     bathrooms: 1,
     area: 24,
     featured: false,
+    description:
+      "An affordable studio in Cihampelas, close to campuses and factory outlets. Ideal for students.",
+    yearBuilt: 2017,
+    carport: 1,
+    furnishing: "furnished",
+    amenities: ["Fully Furnished", "AC", "WiFi", "Laundry", "Pantry"],
+    gallery: [INTERIOR.loft, INTERIOR.bedroom, INTERIOR.bathroom],
   },
   {
     id: "prop-022",
@@ -329,5 +579,18 @@ export const properties = [
     bathrooms: 3,
     area: 280,
     featured: false,
+    description:
+      "A family residence in Bintaro with a spacious yard and a two-car carport. Near international schools and hospitals.",
+    yearBuilt: 2019,
+    carport: 2,
+    furnishing: "partial",
+    amenities: [
+      "Carport",
+      "Taman",
+      "Security 24 Jam",
+      "Water Heater",
+      "One Gate System",
+    ],
+    gallery: [INTERIOR.exterior, INTERIOR.kitchen, INTERIOR.bedroomModern],
   },
 ];

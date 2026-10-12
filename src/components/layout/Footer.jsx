@@ -240,7 +240,7 @@ const Footer = () => {
             <input
               id="footer-email"
               type="email"
-              placeholder="Masukkan email Anda"
+              placeholder="Enter your email"
               required
               className="flex-1 rounded-full bg-primary-foreground/10 px-4 py-2.5 text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary-foreground/30"
             />

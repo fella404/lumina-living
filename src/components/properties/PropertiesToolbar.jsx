@@ -19,14 +19,14 @@ const PropertiesToolbar = ({
   <div className="space-y-4">
     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
       <p className="text-sm text-muted-foreground">
-        {resultCount} properti ditemukan
+        {resultCount} properties found
       </p>
 
       <div className="flex items-center gap-2">
         <input
           type="search"
           aria-label="Cari properti"
-          placeholder="Cari lokasi atau nama properti"
+          placeholder="Search location or property name"
           value={filters.q}
           onChange={(event) => onQueryChange(event.target.value)}
           className="min-w-0 flex-1 rounded-full border border-border bg-input px-4 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:w-64 sm:flex-none"

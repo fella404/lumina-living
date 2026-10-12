@@ -1,8 +1,12 @@
+import { Link } from "react-router";
 import { Bath, Bed, Maximize2 } from "lucide-react";
 import { formatRupiah } from "../../lib/utils";
 
 const PropertyCard = ({ property }) => (
-  <article className="group overflow-hidden rounded-xl border border-border bg-card shadow-card">
+  <Link
+    to={`/properties/${property.slug}`}
+    className="group block overflow-hidden rounded-xl border border-border bg-card shadow-card transition-shadow hover:shadow-lg"
+  >
     <div className="relative aspect-video overflow-hidden">
       <img
         src={property.image}
@@ -47,7 +51,7 @@ const PropertyCard = ({ property }) => (
         </span>
       </div>
     </div>
-  </article>
+  </Link>
 );
 
 export default PropertyCard;
