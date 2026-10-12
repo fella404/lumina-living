@@ -12,7 +12,7 @@ const RegionCard = ({ region }) => (
     <div className="relative flex h-full flex-col items-center justify-center gap-3 p-4 text-center">
       <h3 className="text-2xl font-semibold text-white">{region.name}</h3>
       <Button
-        to={`/regions/${region.slug}`}
+        to={`/properties?region=${encodeURIComponent(region.name)}`}
         variant="outline"
         size="sm"
         className="border-white/50 text-white hover:border-white/80"

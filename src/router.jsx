@@ -3,6 +3,7 @@ import RootLayout from "./components/layout/RootLayout";
 import HomePage from "./pages/HomePage";
 import PropertiesPage from "./pages/PropertiesPage";
 import PropertyDetailPage from "./pages/PropertyDetailPage";
+import RegionsPage from "./pages/RegionsPage";
 import SoonPage from "./components/shared/SoonPage";
 
 export const router = createBrowserRouter([
@@ -14,7 +15,7 @@ export const router = createBrowserRouter([
       { path: "about", element: <SoonPage title="About" /> },
       { path: "properties", element: <PropertiesPage /> },
       { path: "properties/:slug", element: <PropertyDetailPage /> },
-      { path: "regions", element: <SoonPage title="Regions" /> },
+      { path: "regions", element: <RegionsPage /> },
       { path: "regions/:slug", element: <SoonPage title="Region" /> },
       { path: "blogs", element: <SoonPage title="Blogs" /> },
       { path: "blogs/:slug", element: <SoonPage title="Blog" /> },
