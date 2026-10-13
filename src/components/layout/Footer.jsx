@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Mail, Phone, MapPin, Clock, ArrowUp, Send } from "lucide-react";
 import Button from "../ui/Button";
+import { contact } from "../../data/contact";
 
 const currentYear = new Date().getFullYear();
 
@@ -187,32 +188,35 @@ const Footer = () => {
               <li className="flex gap-3">
                 <MapPin size={18} className="shrink-0" aria-hidden />
                 <span className="text-primary-foreground/80">
-                  Jl. Senayan No. 123, Jakarta Selatan 12210
+                  {contact.address}
                 </span>
               </li>
               <li>
                 <a
-                  href="tel:+622122334455"
+                  href={contact.phoneHref}
                   className="flex gap-3 text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   <Phone size={18} className="shrink-0" aria-hidden />
-                  <span>+62 (21) 2233-4455</span>
+                  <span>{contact.phone}</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:hello@luminaliving.id"
+                  href={`mailto:${contact.email}`}
                   className="flex gap-3 text-primary-foreground/70 transition-colors hover:text-primary-foreground"
                 >
                   <Mail size={18} className="shrink-0" aria-hidden />
-                  <span>hello@luminaliving.id</span>
+                  <span>{contact.email}</span>
                 </a>
               </li>
               <li className="flex gap-3 pt-2">
                 <Clock size={18} className="shrink-0" aria-hidden />
                 <div className="text-xs text-primary-foreground/80">
-                  <p>Senin–Jumat: 09:00–18:00</p>
-                  <p>Sabtu: 10:00–16:00</p>
+                  {contact.hours.map((slot) => (
+                    <p key={slot.days}>
+                      {slot.days}: {slot.time}
+                    </p>
+                  ))}
                 </div>
               </li>
             </ul>

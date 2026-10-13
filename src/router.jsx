@@ -6,6 +6,7 @@ import PropertyDetailPage from "./pages/PropertyDetailPage";
 import RegionsPage from "./pages/RegionsPage";
 import BlogsPage from "./pages/BlogsPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
+import ContactPage from "./pages/ContactPage";
 import SoonPage from "./components/shared/SoonPage";
 
 export const router = createBrowserRouter([
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
       { path: "regions/:slug", element: <SoonPage title="Region" /> },
       { path: "blogs", element: <BlogsPage /> },
       { path: "blogs/:slug", element: <BlogDetailPage /> },
-      { path: "contact", element: <SoonPage title="Contact" /> },
+      { path: "contact", element: <ContactPage /> },
     ],
   },
 ]);
