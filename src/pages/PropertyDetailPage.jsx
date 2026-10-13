@@ -95,8 +95,11 @@ const PropertyDetailPage = () => {
   const similar = properties
     .filter(
       (item) =>
-        item.id !== property.id &&
-        (item.type === property.type || item.region === property.region),
+        item.id !== property.id && item.region === property.region,
+    )
+    .sort(
+      (a, b) =>
+        (b.type === property.type) - (a.type === property.type),
     )
     .slice(0, 4);
 
