@@ -611,7 +611,7 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 3,
     area: 250,
-    featured: true,
+    featured: false,
     description:
       "A modern classic home located in the prestigious Polonia area in Medan. Strategic location close to business hubs.",
     yearBuilt: 2020,
@@ -745,7 +745,7 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 3,
     area: 220,
-    featured: true,
+    featured: false,
     description:
       "Elegant tropical house near the iconic Musi River view with spacious modern interiors.",
     yearBuilt: 2019,
@@ -879,7 +879,7 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 3,
     area: 260,
-    featured: true,
+    featured: false,
     description:
       "Modern smart home in Grand City Balikpapan near new capital access roads.",
     yearBuilt: 2022,
@@ -907,7 +907,7 @@ export const properties = [
     bedrooms: 2,
     bathrooms: 1,
     area: 68,
-    featured: true,
+    featured: false,
     description:
       "Oceanfront apartment with direct view of Makassar Strait and integrated plaza access.",
     yearBuilt: 2020,
@@ -1019,7 +1019,7 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 3,
     area: 290,
-    featured: true,
+    featured: false,
     description:
       "Spacious family home near the scenic Kapuas River, designed with tropical architecture.",
     yearBuilt: 2020,
@@ -1152,7 +1152,7 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 4,
     area: 420,
-    featured: true,
+    featured: false,
     description:
       "Exclusive seaside villa offering direct sunset views of Losari Beach.",
     yearBuilt: 2021,
@@ -1290,7 +1290,7 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 4,
     area: 500,
-    featured: true,
+    featured: false,
     description:
       "Hillside luxury villa overlooking Senggigi beach with panoramic ocean sunset views.",
     yearBuilt: 2020,
@@ -1318,7 +1318,7 @@ export const properties = [
     bedrooms: 3,
     bathrooms: 3,
     area: 270,
-    featured: true,
+    featured: false,
     description:
       "Modern resort home 10 minutes away from Mandalika International Circuit and Kuta Beach.",
     yearBuilt: 2021,
@@ -1435,7 +1435,7 @@ export const properties = [
     bedrooms: 5,
     bathrooms: 5,
     area: 750,
-    featured: true,
+    featured: false,
     description:
       "Classic colonial style residence in ultra-exclusive Menteng neighborhood.",
     yearBuilt: 2015,
@@ -1463,7 +1463,7 @@ export const properties = [
     bedrooms: 2,
     bathrooms: 2,
     area: 110,
-    featured: true,
+    featured: false,
     description:
       "High-floor luxury apartment unit right inside SCBD financial center.",
     yearBuilt: 2021,
@@ -1530,7 +1530,7 @@ export const properties = [
     bedrooms: 3,
     bathrooms: 3,
     area: 380,
-    featured: true,
+    featured: false,
     description:
       "Architectural eco-friendly villa in popular Canggu area with private pool.",
     yearBuilt: 2022,
@@ -1619,7 +1619,7 @@ export const properties = [
     bedrooms: 5,
     bathrooms: 5,
     area: 600,
-    featured: true,
+    featured: false,
     description:
       "Spectacular hillside villa with infinity pool and golf view in Dago Pakar.",
     yearBuilt: 2020,
@@ -1708,7 +1708,7 @@ export const properties = [
     bedrooms: 5,
     bathrooms: 4,
     area: 450,
-    featured: true,
+    featured: false,
     description:
       "Luxurious residence in East Surabaya with private yard and top security.",
     yearBuilt: 2021,
@@ -1797,7 +1797,7 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 3,
     area: 360,
-    featured: true,
+    featured: false,
     description:
       "Serene mountain villa with views of Mount Merapi in upper Sleman.",
     yearBuilt: 2020,
@@ -1886,7 +1886,7 @@ export const properties = [
     bedrooms: 5,
     bathrooms: 5,
     area: 450,
-    featured: true,
+    featured: false,
     description: "Ultra-luxurious waterfront residence in NavaPark BSD City.",
     yearBuilt: 2022,
     carport: 3,
@@ -2241,7 +2241,7 @@ export const properties = [
     bedrooms: 4,
     bathrooms: 4,
     area: 280,
-    featured: true,
+    featured: false,
     description:
       "Exclusive top-floor penthouse unit with 360 view of Jakarta city skyline.",
     yearBuilt: 2020,
