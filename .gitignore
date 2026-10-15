@@ -26,7 +26,9 @@ dist-ssr
 COMPONENTS.md
 PLAN.md
 PRD.md
+PROMPT.md
 STYLEGUIDE.md
+test.md
 
 # wrangler files
 .wrangler
