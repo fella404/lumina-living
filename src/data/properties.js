@@ -3,18 +3,18 @@
 // Foto interior bersama untuk galeri detail page (mock).
 const INTERIOR = {
   living:
-    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&q=80",
   kitchen:
-    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    "https://images.unsplash.com/photo-1725257928373-dc6d2ac7b145?w=800&q=80",
   bedroom:
-    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
+    "https://images.unsplash.com/photo-1778313878852-1bbe70eae16b?w=800&q=80",
   bathroom:
-    "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+    "https://images.unsplash.com/photo-1667550177753-52b318cd4d40?w=800&q=80",
   dining:
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
+    "https://images.unsplash.com/photo-1613545325268-314979eeef03?w=800&q=80",
   modern:
     "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
-  pool: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+  pool: "https://images.unsplash.com/photo-1613152184920-bc1c4ab7fd1d?w=800&q=80",
   exterior:
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
   loft: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
