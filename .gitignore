@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+COMPONENTS.md
+PLAN.md
+PRD.md
+STYLEGUIDE.md
