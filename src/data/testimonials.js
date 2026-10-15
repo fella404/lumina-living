@@ -1,10 +1,10 @@
 export const testimonials = [
   {
     id: "testi-001",
-    name: "John Doe",
-    role: "Director at Traveloka",
+    name: "Gilang",
+    role: "Pembeli rumah",
     quote:
-      "This platform is awesome. I find my new home for my family in Jakarta and the process is very easy. Trusted & Guaranted.",
+      "Proses cari rumah untuk keluarga di Jakarta jadi jauh lebih simpel dan transparan. Timnya sangat membantu dari survei sampai urusan legalitas.",
     avatar: "/testimonials-image/person-1.png",
   },
   {
@@ -20,7 +20,7 @@ export const testimonials = [
     name: "Citra Lestari",
     role: "Penyewa apartemen",
     quote:
-      "Cari unit untuk disewa itu cepat. Foto dan deskripsi sesuai dengan kondisi aslinya.",
+      "Dapat unit sewa yang pas cuma dalam hitungan hari. Kondisi aslinya persis seperti di foto dan deskripsi, nggak ada yang ditutup-tutupi.",
     avatar: "/testimonials-image/person-3.png",
   },
   {

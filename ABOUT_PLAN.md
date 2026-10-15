@@ -52,7 +52,7 @@ Dokumen ini berisi rencana implementasi halaman **About Us** (`/about`) yang dia
 
 - [x] `aboutStats`: 3 metrik performa utama (misal: 98% Kepuasan Klien, 500+ Properti Terkurasi, 12K+ Keluarga Terbantu).
 - [x] `aboutFeatures`: 4 item accordion untuk *Why Choose Us* (title, description, icon opsional).
-- [x] `aboutTeam`: 4 data profil tim (id, name, role, image, socialLinks: linkedin, twitter, instagram).
+- [x] `aboutTeam`: 12 data profil tim (4 foto asli + 8 generic avatar dengan toggle expand).
 - [ ] `aboutPartners`: daftar partner developer/institusi properti terkemuka (name, logo/text).
 
 ### 2.2 Komponen Section (`src/components/about/`)

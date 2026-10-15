@@ -85,4 +85,92 @@ export const aboutTeam = [
       twitter: "#",
     },
   },
+  {
+    id: "hendra-kurniawan",
+    name: "Hendra Kurniawan",
+    role: "Senior Property Consultant",
+    image: null,
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: "nadia-safira",
+    name: "Nadia Safira",
+    role: "Mortgage & Financing Specialist",
+    image: null,
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: "rizky-ananda",
+    name: "Rizky Ananda",
+    role: "Market Research Analyst",
+    image: null,
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: "alyssa-gunawan",
+    name: "Alyssa Gunawan",
+    role: "Client Relations Lead",
+    image: null,
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: "bayu-setiawan",
+    name: "Bayu Setiawan",
+    role: "Commercial Property Advisor",
+    image: null,
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: "clarissa-putri",
+    name: "Clarissa Putri",
+    role: "Interior & Spatial Consultant",
+    image: null,
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: "reza-firmansyah",
+    name: "Reza Firmansyah",
+    role: "Valuation & Appraisals Lead",
+    image: null,
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#",
+      twitter: "#",
+    },
+  },
+  {
+    id: "maya-anggraeni",
+    name: "Maya Anggraeni",
+    role: "Digital Marketing & Brand Strategist",
+    image: null,
+    socialLinks: {
+      linkedin: "#",
+      instagram: "#",
+      twitter: "#",
+    },
+  },
 ];

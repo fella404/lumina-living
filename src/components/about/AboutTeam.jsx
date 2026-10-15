@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { UserRound } from "lucide-react";
 import Button from "../ui/Button";
 import { aboutTeam } from "../../data/about";
 
@@ -41,6 +43,8 @@ const socialIcons = {
 };
 
 const AboutTeam = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleTeam = showAll ? aboutTeam : aboutTeam.slice(0, 4);
   return (
     <section className="relative overflow-hidden bg-background py-16 md:py-24">
       {/* Soft background glow */}
@@ -74,11 +78,13 @@ const AboutTeam = () => {
             </p>
             <div className="mt-5">
               <Button
+                type="button"
                 variant="primary"
                 size="sm"
+                onClick={() => setShowAll((prev) => !prev)}
                 className="rounded-full px-6 py-2.5 shadow-sm"
               >
-                View All
+                {showAll ? "Show Less" : "View All"}
               </Button>
             </div>
           </div>
@@ -86,16 +92,24 @@ const AboutTeam = () => {
 
         {/* Team Grid */}
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          {aboutTeam.map((member) => (
+          {visibleTeam.map((member) => (
             <div key={member.id} className="group flex flex-col">
               {/* Image Frame */}
               <div className="relative aspect-4/5 w-full overflow-hidden rounded-3xl bg-primary/5 transition-transform duration-300 group-hover:-translate-y-1">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  loading="lazy"
-                  className="h-full w-full object-cover object-top"
-                />
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover object-top"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-b from-primary/10 via-primary/5 to-muted/40">
+                    <div className="flex h-24 w-24 items-center justify-center rounded-full bg-background/70 text-primary/60 shadow-inner backdrop-blur-sm sm:h-28 sm:w-28">
+                      <UserRound className="h-12 w-12 sm:h-14 sm:w-14" aria-hidden="true" />
+                    </div>
+                  </div>
+                )}
 
                 {/* Floating Social Arch/Dock */}
                 <div className="absolute inset-x-4 bottom-0 flex justify-center">
