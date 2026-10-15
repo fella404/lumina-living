@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import RootLayout from "./components/layout/RootLayout";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 import PropertiesPage from "./pages/PropertiesPage";
 import PropertyDetailPage from "./pages/PropertyDetailPage";
 import RegionsPage from "./pages/RegionsPage";
@@ -15,7 +16,7 @@ export const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "about", element: <SoonPage title="About" /> },
+      { path: "about", element: <AboutPage /> },
       { path: "properties", element: <PropertiesPage /> },
       { path: "properties/:slug", element: <PropertyDetailPage /> },
       { path: "regions", element: <RegionsPage /> },

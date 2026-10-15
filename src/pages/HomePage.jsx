@@ -5,7 +5,7 @@ import FeaturedProperties from "../components/home/FeaturedProperties";
 import PropertyCatalog from "../components/home/PropertyCatalog";
 import PopularRegions from "../components/home/PopularRegions";
 import HomeBlogs from "../components/home/HomeBlogs";
-import Testimonials from "../components/home/Testimonials";
+import Testimonials from "../components/shared/Testimonials";
 
 const HomePage = () => {
   const [scrolled, setScrolled] = useState(false);
