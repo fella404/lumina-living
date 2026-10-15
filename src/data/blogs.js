@@ -6,7 +6,7 @@ export const blogs = [
       "How to add color to your kitchen: From color cabinets to fresh flower",
     subtitle:
       "Transform your cooking space into a vibrant hub with smart palette choices, two-tone cabinets, and natural accents.",
-    image: "https://picsum.photos/seed/blog-first-home/800/600",
+    image: "https://images.unsplash.com/photo-1785061384142-26ffdb7ce7be?w=800&q=80",
     tags: ["Interior Design", "Kitchen"],
     author: "Rian Pratama",
     date: "14 Feb 2026",
@@ -48,7 +48,7 @@ export const blogs = [
     title: "How to choose the right furniture for your home like a pro",
     subtitle:
       "Avoid buyer's remorse by mastering proportion, flow, and material durability before visiting the showroom.",
-    image: "https://picsum.photos/seed/blog-trend-2026/800/600",
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
     tags: ["Decoration", "Home"],
     author: "Siti Rahmawati",
     date: "10 Feb 2026",
@@ -87,7 +87,7 @@ export const blogs = [
       "6 ways to filter what you need before discover more about your home",
     subtitle:
       "Separate genuine deal-breakers from superficial nice-to-haves to streamline your property search.",
-    image: "https://picsum.photos/seed/blog-rent-vs-buy/800/600",
+    image: "https://images.unsplash.com/photo-1781229771042-2a859f8f8022?w=800&q=80",
     tags: ["Property", "Real Estate"],
     author: "Dimas Anggara",
     date: "04 Feb 2026",
@@ -125,7 +125,7 @@ export const blogs = [
     title: "6 things to watch out for when shopping for homes in Burlingame",
     subtitle:
       "Key considerations on zoning, flood history, and historic district restrictions before placing an offer.",
-    image: "https://picsum.photos/seed/blog-minimalist/800/600",
+    image: "https://images.unsplash.com/photo-1680503397654-cd18497b1b41?w=800&q=80",
     tags: ["Real Estate", "Tips"],
     author: "Dimas Anggara",
     date: "28 Jan 2026",
@@ -159,7 +159,7 @@ export const blogs = [
     title: "Smart home essentials for first-time buyers",
     subtitle:
       "A pragmatic starter roadmap for home automation focusing on real security, efficiency, and comfort.",
-    image: "https://picsum.photos/seed/blog-smart-home/800/600",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
     tags: ["Property", "Tips"],
     author: "Rian Pratama",
     date: "22 Jan 2026",
@@ -193,7 +193,7 @@ export const blogs = [
     title: "10 interior design mistakes to avoid",
     subtitle:
       "From undersized rugs to harsh single-source lighting, here are the most common pitfalls and their easy fixes.",
-    image: "https://picsum.photos/seed/blog-design-mistakes/800/600",
+    image: "https://images.unsplash.com/photo-1784126689199-3b46f6488469?w=800&q=80",
     tags: ["Interior Design", "Decoration"],
     author: "Siti Rahmawati",
     date: "18 Jan 2026",
@@ -227,7 +227,7 @@ export const blogs = [
     title: "How to stage your home for a quick sale",
     subtitle:
       "Proven decluttering and styling strategies that help prospective buyers envision their own future in your property.",
-    image: "https://picsum.photos/seed/blog-staging/800/600",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
     tags: ["Real Estate", "Tips"],
     author: "Dimas Anggara",
     date: "12 Jan 2026",
@@ -257,7 +257,7 @@ export const blogs = [
     title: "Maximizing small spaces with smart storage",
     subtitle:
       "Clever vertical solutions, multi-functional furniture, and hidden compartments for urban apartment living.",
-    image: "https://picsum.photos/seed/blog-small-spaces/800/600",
+    image: "https://images.unsplash.com/photo-1673970303139-72fafe11bc93?w=800&q=80",
     tags: ["Decoration", "Home"],
     author: "Siti Rahmawati",
     date: "08 Jan 2026",
@@ -291,7 +291,7 @@ export const blogs = [
     title: "A beginner's guide to property investment",
     subtitle:
       "Understanding rental yield, capital appreciation, and risk management when building your real estate portfolio.",
-    image: "https://picsum.photos/seed/blog-investment/800/600",
+    image: "https://images.unsplash.com/photo-1555636222-cae831e670b3?w=800&q=80",
     tags: ["Property", "Real Estate"],
     author: "Dimas Anggara",
     date: "02 Jan 2026",
@@ -325,7 +325,7 @@ export const blogs = [
     title: "Renovating on a budget: what's worth it",
     subtitle:
       "Where to spend your renovation budget for maximum daily joy and future resale equity.",
-    image: "https://picsum.photos/seed/blog-renovation/800/600",
+    image: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?w=800&q=80",
     tags: ["Home", "Tips"],
     author: "Rian Pratama",
     date: "26 Dec 2025",
@@ -359,7 +359,7 @@ export const blogs = [
     title: "Renting vs buying: what suits your lifestyle",
     subtitle:
       "A candid breakdown of financial readiness, career mobility, and lifestyle flexibility to help you decide.",
-    image: "https://picsum.photos/seed/blog-rent-or-buy/800/600",
+    image: "https://images.unsplash.com/photo-1565402170291-8491f14678db?w=800&q=80",
     tags: ["Property", "Real Estate"],
     author: "Dimas Anggara",
     date: "19 Dec 2025",
@@ -393,7 +393,7 @@ export const blogs = [
     title: "Cozy living room ideas for a warm home",
     subtitle:
       "Layering textures, warm lighting tones, and natural woods to craft a welcoming sanctuary for family and guests.",
-    image: "https://picsum.photos/seed/blog-cozy-living/800/600",
+    image: "https://images.unsplash.com/photo-1770751188018-794ed229204a?w=800&q=80",
     tags: ["Interior Design", "Home"],
     author: "Siti Rahmawati",
     date: "11 Dec 2025",
