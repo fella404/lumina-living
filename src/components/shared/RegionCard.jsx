@@ -1,7 +1,26 @@
+import { motion } from "framer-motion";
 import Button from "../ui/Button";
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.45,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
+};
+
 const RegionCard = ({ region }) => (
-  <article className="group relative aspect-[16/9] overflow-hidden rounded-xl border border-border shadow-card">
+  <motion.article
+    variants={cardVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.15 }}
+    className="group relative aspect-[16/9] overflow-hidden rounded-xl border border-border shadow-card"
+  >
     <img
       src={region.image}
       alt={region.name}
@@ -21,7 +40,7 @@ const RegionCard = ({ region }) => (
         View more
       </Button>
     </div>
-  </article>
+  </motion.article>
 );
 
 export default RegionCard;

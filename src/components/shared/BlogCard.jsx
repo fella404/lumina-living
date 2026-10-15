@@ -1,78 +1,128 @@
+import * as React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Clock } from "lucide-react";
 import { Link } from "react-router";
+import { cn } from "../../lib/utils";
+import Button from "../ui/Button";
 
-const BlogCard = ({ blog, variant = "compact" }) => {
-  if (variant === "featured") {
-    return (
-      <Link
-        to={`/blogs/${blog.slug}`}
-        className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-card h-full"
-      >
-        <div className="flex h-full w-full shrink min-h-58 overflow-hidden sm:h-48">
-          <img
-            src={blog.image}
-            alt={blog.title}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        </div>
-        <div className="flex flex-1 flex-col justify-between p-4 sm:p-5">
-          <div className="flex flex-col gap-1.5">
-            <h3 className="text-lg font-semibold text-card-foreground transition-colors group-hover:text-primary">
-              {blog.title}
-            </h3>
-            <p className="line-clamp-3 text-sm text-muted-foreground">
-              {blog.subtitle}
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-1.5 pt-2">
-            {blog.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-border px-3 py-2 text-xs font-medium text-muted-foreground"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </Link>
-    );
-  }
+const contentVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0 },
+};
+
+export const BlogCard = ({ blog, className }) => {
   return (
-    <Link
-      to={`/blogs/${blog.slug}`}
-      className="group flex flex-row items-stretch gap-4 rounded-xl border border-border bg-card p-3 shadow-card"
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+      variants={contentVariants}
+      whileHover={{
+        scale: 1.02,
+        boxShadow: "0px 10px 30px -5px rgba(17, 24, 39, 0.1)",
+        transition: { type: "spring", stiffness: 300, damping: 20 },
+      }}
+      className={cn(
+        "group/card flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-card",
+        className,
+      )}
     >
-      <div className="h-28 w-28 aspect-square shrink-0 overflow-hidden rounded-lg">
+      {/* Image Header with Hover Zoom */}
+      <div className="relative h-56 w-full overflow-hidden sm:h-60">
         <img
           src={blog.image}
           alt={blog.title}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-105"
         />
-      </div>
-      <div className="flex min-w-0 flex-1 flex-col justify-between py-0.5">
-        <div className="flex flex-col gap-1.5">
-          <h3 className="line-clamp-1 text-base font-semibold text-card-foreground transition-colors group-hover:text-primary">
-            {blog.title}
-          </h3>
-          <p className="line-clamp-2 text-xs text-muted-foreground">
-            {blog.subtitle}
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-1.5">
-          {blog.tags.map((tag) => (
+
+        {/* Top Badges (Tags) */}
+        <div className="absolute left-3 top-3 z-10 flex flex-wrap gap-1.5">
+          {blog.tags?.slice(0, 2).map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-border px-3 py-2 text-xs font-medium text-muted-foreground"
+              className="inline-flex items-center rounded-full border border-border/60 bg-background/85 px-2.5 py-0.5 text-xs font-medium text-foreground backdrop-blur-sm"
             >
               {tag}
             </span>
           ))}
         </div>
+
+        {/* Top Right Badge (Reading Time) */}
+        {blog.readTime && (
+          <div className="absolute right-3 top-3 z-10">
+            <span className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-background/85 px-2.5 py-0.5 text-xs font-medium text-muted-foreground backdrop-blur-sm">
+              <Clock size={12} aria-hidden />
+              {blog.readTime}
+            </span>
+          </div>
+        )}
       </div>
-    </Link>
+
+      {/* Content Section */}
+      <motion.div
+        variants={contentVariants}
+        className="flex flex-1 flex-col justify-between p-5 space-y-4"
+      >
+        <div className="space-y-2.5">
+          <motion.div variants={itemVariants}>
+            <Link
+              to={`/blogs/${blog.slug}`}
+              className="transition-colors group-hover/card:text-primary"
+            >
+              <h3 className="line-clamp-2 text-lg font-bold text-foreground sm:text-xl">
+                {blog.title}
+              </h3>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            variants={itemVariants}
+            className="text-xs text-muted-foreground sm:text-sm"
+          >
+            <span>{blog.date}</span> &bull; <span>{blog.author}</span>
+          </motion.div>
+
+          <motion.p
+            variants={itemVariants}
+            className="line-clamp-3 text-sm leading-relaxed text-muted-foreground"
+          >
+            {blog.subtitle}
+          </motion.p>
+        </div>
+
+        {/* Bottom CTA Row */}
+        <motion.div
+          variants={itemVariants}
+          className="flex items-center justify-between border-t border-border pt-3"
+        >
+          <span className="text-xs font-medium text-muted-foreground">
+            By {blog.author}
+          </span>
+          <Button
+            to={`/blogs/${blog.slug}`}
+            variant="primary"
+            size="sm"
+            className="group/btn"
+          >
+            Read Article
+            <ArrowRight size={14} className="transition-transform group-hover/btn:translate-x-1" />
+          </Button>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

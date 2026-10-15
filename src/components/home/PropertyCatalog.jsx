@@ -48,7 +48,7 @@ const PropertyCatalog = () => {
         />
       </div>
 
-      <PropertyGrid properties={visible} />
+      <PropertyGrid key={activeType} properties={visible} />
 
       <div className="mt-8 flex justify-center">
         <Button variant="primary" size="lg" to="/properties">

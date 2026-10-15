@@ -73,7 +73,7 @@ const PropertiesPage = () => {
 
       <div className="mt-8">
         {visible.length > 0 ? (
-          <PropertyGrid properties={visible} />
+          <PropertyGrid key={filterKey} properties={visible} />
         ) : (
           <EmptyPropertyState
             hasSearchQuery={filters.q.trim().length > 0}
